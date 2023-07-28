@@ -286,12 +286,12 @@ if selected == "View":
         st.write(df)
         st.write("### :green[Number of videos in each channel :]")
         #st.bar_chart(df,x= mycursor.column_names[0],y= mycursor.column_names[1])
-        fig = px.bar(df,
-                     x=mycursor.column_names[0],
-                     y=mycursor.column_names[1],
-                     orientation='v',
-                     color=mycursor.column_names[0]
-                    )
+   #      fig = px.bar(df,
+   #                   x=mycursor.column_names[0],
+   #                   y=mycursor.column_names[1],
+   #                   orientation='v',
+   #                   color=mycursor.column_names[0]
+   #                  )
       #  st.plotly_chart(fig,use_container_width=True)
         
     elif questions == '3. What are the top 10 most viewed videos and their respective channels?':
@@ -302,12 +302,12 @@ if selected == "View":
         df = pd.DataFrame(mycursor.fetchall(),columns=mycursor.column_names)
         st.write(df)
         st.write("### :green[Top 10 most viewed videos :]")
-        fig = px.bar(df,
-                     x=mycursor.column_names[2],
-                     y=mycursor.column_names[1],
-                     orientation='h',
-                     color=mycursor.column_names[0]
-                    )
+        # fig = px.bar(df,
+        #              x=mycursor.column_names[2],
+        #              y=mycursor.column_names[1],
+        #              orientation='h',
+        #              color=mycursor.column_names[0]
+        #             )
      #   st.plotly_chart(fig,use_container_width=True)
         
     elif questions == '4. How many comments were made on each video, and what are their corresponding video names?':
@@ -328,12 +328,12 @@ if selected == "View":
         df = pd.DataFrame(mycursor.fetchall(),columns=mycursor.column_names)
         st.write(df)
         st.write("### :green[Top 10 most liked videos :]")
-        fig = px.bar(df,
-                     x=mycursor.column_names[2],
-                     y=mycursor.column_names[1],
-                     orientation='h',
-                     color=mycursor.column_names[0]
-                    )
+        # fig = px.bar(df,
+        #              x=mycursor.column_names[2],
+        #              y=mycursor.column_names[1],
+        #              orientation='h',
+        #              color=mycursor.column_names[0]
+        #             )
       #  st.plotly_chart(fig,use_container_width=True)
         
     elif questions == '6. What is the total number of likes and dislikes for each video, and what are their corresponding video names?':
@@ -350,12 +350,12 @@ if selected == "View":
         df = pd.DataFrame(mycursor.fetchall(),columns=mycursor.column_names)
         st.write(df)
         st.write("### :green[Channels vs Views :]")
-        fig = px.bar(df,
-                     x=mycursor.column_names[0],
-                     y=mycursor.column_names[1],
-                     orientation='v',
-                     color=mycursor.column_names[0]
-                    )
+        # fig = px.bar(df,
+        #              x=mycursor.column_names[0],
+        #              y=mycursor.column_names[1],
+        #              orientation='v',
+        #              color=mycursor.column_names[0]
+        #             )
    #     st.plotly_chart(fig,use_container_width=True)
         
     elif questions == '8. What are the names of all the channels that have published videos in the year 2022?':
@@ -405,10 +405,10 @@ if selected == "View":
         df = pd.DataFrame(mycursor.fetchall(),columns=mycursor.column_names)
         st.write(df)
         st.write("### :green[Videos with most comments :]")
-        fig = px.bar(df,
-                     x=mycursor.column_names[1],
-                     y=mycursor.column_names[2],
-                     orientation='v',
-                     color=mycursor.column_names[0]
-                    )
+        # fig = px.bar(df,
+        #              x=mycursor.column_names[1],
+        #              y=mycursor.column_names[2],
+        #              orientation='v',
+        #              color=mycursor.column_names[0]
+        #             )
      #   st.plotly_chart(fig,use_container_width=True)
