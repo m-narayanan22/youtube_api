@@ -1,7 +1,7 @@
 #importing the necessary libraries
-!pip install plotly
+#!pip install plotly
 import pandas as pd
-import plotly.express as px
+#import plotly.express as px
 import streamlit as st
 from streamlit_option_menu import option_menu
 import mysql.connector as sql
@@ -292,7 +292,7 @@ if selected == "View":
                      orientation='v',
                      color=mycursor.column_names[0]
                     )
-        st.plotly_chart(fig,use_container_width=True)
+      #  st.plotly_chart(fig,use_container_width=True)
         
     elif questions == '3. What are the top 10 most viewed videos and their respective channels?':
         mycursor.execute("""SELECT channel_name AS Channel_Name, title AS Video_Title, views AS Views 
@@ -308,7 +308,7 @@ if selected == "View":
                      orientation='h',
                      color=mycursor.column_names[0]
                     )
-        st.plotly_chart(fig,use_container_width=True)
+     #   st.plotly_chart(fig,use_container_width=True)
         
     elif questions == '4. How many comments were made on each video, and what are their corresponding video names?':
         mycursor.execute("""SELECT a.video_id AS Video_id, a.title AS Video_Title, b.Total_Comments
@@ -334,7 +334,7 @@ if selected == "View":
                      orientation='h',
                      color=mycursor.column_names[0]
                     )
-        st.plotly_chart(fig,use_container_width=True)
+      #  st.plotly_chart(fig,use_container_width=True)
         
     elif questions == '6. What is the total number of likes and dislikes for each video, and what are their corresponding video names?':
         mycursor.execute("""SELECT title AS Title, likes AS Likes_Count
@@ -356,7 +356,7 @@ if selected == "View":
                      orientation='v',
                      color=mycursor.column_names[0]
                     )
-        st.plotly_chart(fig,use_container_width=True)
+   #     st.plotly_chart(fig,use_container_width=True)
         
     elif questions == '8. What are the names of all the channels that have published videos in the year 2022?':
         mycursor.execute("""SELECT channel_name AS Channel_Name
@@ -411,4 +411,4 @@ if selected == "View":
                      orientation='v',
                      color=mycursor.column_names[0]
                     )
-        st.plotly_chart(fig,use_container_width=True)
+     #   st.plotly_chart(fig,use_container_width=True)
